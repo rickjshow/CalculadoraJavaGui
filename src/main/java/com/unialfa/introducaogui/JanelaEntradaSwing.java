@@ -1,4 +1,4 @@
-package com.unialfa;
+package com.unialfa.introducaogui;
 
 import javax.swing.*;
 import java.awt.*;

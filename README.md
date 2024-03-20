@@ -1,24 +1,27 @@
 # UniALFA - Linguagem de Programação Java
-## Introdução ao uso de Interfaces Gráficas de Usuário usando Swing
-## Java Swing
-* O Java Swing é um conjunto de bibliotecas gráficas para a criação de interfaces gráficas de usuário (GUIs) em aplicações Java. 
-* Foi introduzido pela Sun Microsystems (agora parte da Oracle Corporation) como parte da Java Foundation Classes (JFC) para fornecer uma alternativa mais rica e flexível ao antigo toolkit de GUI chamado Abstract Window Toolkit (AWT).
-* O Java Swing é uma parte integrante da plataforma Java Standard Edition (Java SE 17).
-### Principais características do Java Swing:
-#### Componentes Leves:
-* Diferentemente do AWT, que dependia dos componentes nativos da plataforma, o Swing introduziu componentes leves, escritos inteiramente em Java. Isso torna as interfaces gráficas mais consistentes e portáveis entre diferentes sistemas operacionais.
-Look and Feel Personalizável:
-* O Swing permite que você defina o "look and feel" (aparência e comportamento) das GUIs. Isso significa que você pode personalizar a aparência de suas aplicações para corresponder ao estilo visual desejado, independentemente do sistema operacional subjacente.
-#### Rico Conjunto de Componentes:
-* Oferece uma ampla gama de componentes gráficos, como botões, caixas de texto, tabelas, árvores, painéis, entre outros. Esses componentes podem ser combinados para criar interfaces complexas.
-#### Modelo de Eventos:
-* Usa um modelo de eventos para lidar com interações do usuário. Os desenvolvedores podem registrar ouvintes para responder a eventos como cliques de mouse, pressionamento de teclas, entre outros.
-#### Gerenciadores de Layout:
-* Introduz gerenciadores de layout flexíveis que permitem posicionar e organizar componentes de maneira eficaz na tela.
-#### Thread-Safe:
-* Diferentemente do AWT, o Swing é thread-safe, o que significa que pode ser utilizado em ambientes multithread sem preocupações excessivas.
-#### Extensibilidade:
-* Oferece uma arquitetura extensível que permite a criação de novos componentes e extensões personalizadas.
-### Documentação
-* [Oracle Java tutorial](https://docs.oracle.com/javase/tutorial/uiswing/index.html)
-* [Oracle Java Swing](https://docs.oracle.com/en/java/javase/17/docs/api/java.desktop/javax/swing/package-summary.html)
+## Introdução ao tratamento de Exceções
+### Try-Catch: 
+* O bloco try-catch é usado para capturar e lidar com exceções específicas que podem ocorrer em um trecho de código.
+### Finally:
+* O bloco finally é usado para executar código que deve ser executado independentemente de ocorrer ou não uma exceção dentro do bloco try.
+### Throws:
+* A palavra reservada throws é usada para declarar que um método pode lançar uma exceção específica, mas não a trata dentro do método. Isso significa que a exceção será propagada para o método que chama o método atual.
+### Throw:
+* A palavra reservada throw é usada em Java para explicitamente lançar uma exceção durante a execução de um programa.
+### Try-With-Resources:
+* A partir do Java 7, você pode usar o bloco try-with-resources para garantir que os recursos sejam fechados corretamente, mesmo se ocorrer uma exceção. Isso é especialmente útil para recursos que implementam a interface AutoCloseable, como arquivos, conexões de banco de dados, etc.
+### Tipos de Exceções
+ Em Java, as exceções podem ser divididas em duas categorias principais: exceções verificadas (checked exceptions) e exceções não verificadas (unchecked exceptions).
+#### Exceções Verificadas (Checked Exceptions):
+* São exceções que são verificadas em tempo de compilação pelo compilador.
+* Qualquer método que pode lançar uma exceção verificada deve declarar explicitamente isso usando a cláusula throws.
+* São subclasses diretas da classe Exception, mas não são subclasses de RuntimeException.
+* Exemplos comuns incluem IOException, SQLException, ClassNotFoundException, entre outros.
+* O objetivo é forçar o programador a lidar com situações excepcionais que podem ocorrer durante a execução do programa.
+#### Exceções Não Verificadas (Unchecked Exceptions):
+* São exceções que não são verificadas em tempo de compilação pelo compilador.
+* O programador não é obrigado a declarar ou tratar essas exceções.
+* São subclasses diretas da classe RuntimeException.
+* São frequentemente usadas para sinalizar erros de programação ou condições excepcionais que normalmente indicam bugs no código.
+* Exemplos comuns incluem NullPointerException, IllegalArgumentException, ArrayIndexOutOfBoundsException, entre outros.
+* O principal objetivo é sinalizar problemas que provavelmente não podem ser tratados de forma eficaz pelo programa.
